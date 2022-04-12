@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     <header class="navbar-fixed">
@@ -21,6 +24,7 @@
           </ul>
           <ul class="right">
             <li><a href="/about">About</a></li>
+            <li><a href="/events">View all Events</a></li>
           </ul>
         </div>
       </nav>
@@ -30,7 +34,7 @@
         {% endblock %}
     </main>
     <footer class="page-footer">
-      <div class="right">
+      <div class="center">
         All Rights Reserved, &copy; 2022 EventsApp &nbsp;
       </div>
     </footer>
