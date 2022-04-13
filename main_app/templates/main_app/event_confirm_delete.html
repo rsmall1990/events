@@ -7,7 +7,7 @@
 <form action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Delete Event" class="btn">
+    <input type="submit" value="Delete Event" class="btn waves-effect">
     <a href="{% url 'detail' object.id %}" class="btn">Cancel</a>
 </form>
 

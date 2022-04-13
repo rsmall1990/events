@@ -13,11 +13,13 @@
     <table>
         {{ form.as_table }}
     </table>
-    <input type="submit" value="{% if object %} Edit {% else %} Add Event {% endif %}" class="btn red">
+    <button class="btn waves-effect waves-light" type="submit" name="action">{% if object %} Edit {% else %} Add Event {% endif %}
+        <i class="material-icons right">send</i>
+    </button>
     {% if object %}
-        <a class="btn" href="{% url 'detail' object.id">Cancel</a>
+        <a class="btn waves-effect" href="{% url 'detail' object.id %}">Cancel</a>
     {% else %}
-        <a class="btn"  href="{% url 'home' %}">Cancel</a>
+        <a class="btn waves-effect"  href="{% url 'home' %}">Cancel</a>
     {% endif %}
 </form>
 

@@ -4,16 +4,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>EventsApp</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    <!-- Import Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    
     <header class="navbar-fixed">
       <nav>
         <div class="nav-wrapper blue">
@@ -26,7 +30,7 @@
             <li><a href="{%  url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
             <li><a href="{% url 'events_create' %}">Add Events</a></li>
-            <li><a href="{% url 'index' %}">View all Events</a></li>
+            <li><a href="{% url 'index' %}">View Events</a></li>
             <li><a href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
             <li><a href="{% url 'login' %}">Log In</a></li>
