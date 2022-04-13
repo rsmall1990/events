@@ -43,7 +43,7 @@ def signup(request):
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
-    fields = '__all__'
+    fields = ('name', 'date', 'description', 'attendence')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
